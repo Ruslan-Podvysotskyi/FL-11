@@ -1,0 +1,220 @@
+body{
+    background: $contentBackground;
+    margin: 0;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 1536px;
+    width: 100%;
+}
+
+p{
+    margin: 0;
+}
+
+@mixin bottomLine($width, $height, $left, $bottom) {
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: '';
+        width: $width;
+        height: $height;
+        position: absolute;
+        left: $left;
+        bottom: $bottom;
+        z-index: -1;
+        background-color: $colorLine;
+    }
+}
+
+.landing-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 2px;
+    & img{
+        width: 54px;
+    }
+    & p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 0 17px;
+        font-family: $fontText;
+        font-weight: 600;
+        font-size: 32px;
+        color: $textColor;
+        line-height: 1;
+        & span{
+            font-size: 13px;
+            margin-top: 4px;
+        }
+    }
+}
+
+.header{
+    background: $headerBackground no-repeat left center;
+    background-size: cover;
+    padding: 26px 0 219px;
+    border-bottom-right-radius: 39%;
+    width: 100%;
+    &-wrap{
+        @extend main;
+    }
+    &_heading{
+        color: $textColor;
+        font-size: 50px;
+        font-weight: 900;
+        font-size: 90px;
+        margin: 91px 0 0;
+        line-height: 1;
+        max-width: 620px;
+        font-family: $fontTitle;
+        @include bottomLine(379px, 31px, 0, 0);
+    }
+    &_text{
+        color: $textColor;
+        font-size: 19px;
+        font-family: $fontText;
+        margin: 43px 0 0;
+        line-height: 1.6;
+        width: 100%;
+        letter-spacing: 1px;
+        white-space: pre-line;
+    }
+    &_button{
+        margin-top: 75px;
+        background: $btnBackground;
+        font-family: $fontTitle;
+        font-weight: 600;
+        border: none;
+        color: map-get($newColor, white);
+        font-size: 20px;
+        padding: 18px 56px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            background: darken($btnBackground, 3%);
+        }
+        &:active{
+            background: lighten($btnBackground, 4%);
+        }
+    }
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px 0 0;
+    &_text{ 
+        color: $textColor;
+        font-size: 52px;
+        line-height: 1;
+        font-weight: 600;
+        font-family: $fontTitle;
+        @include bottomLine(237px, 16px, 267px, 4px);
+    }
+    &_card_wrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 53px;
+    }
+    &_card{
+        width: 495px;
+        text-align: center;
+        padding: 25px;
+        box-sizing: border-box;
+        background: $cardBackground;
+        color: $cardTextColor;
+        font-family: $fontText;
+        border-radius: $cardRadius;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_img{
+            width: 100%;
+            display: block;
+            border-radius: $cardRadius;
+        }
+        &_heading{
+            color: map-get($newColor, white);
+            font-size: 30px;
+            font-weight: 600;
+            margin: 17px 0 0;
+            font-family: $fontTitle;
+            @include bottomLine(100%, 17px, 0, 0);
+        }
+        &_text{
+            margin: 16px 0 0;
+            font-size: 21px;
+            line-height: 1.5;
+        }
+        &:nth-child(3) .section_card_text{
+            margin-top: 31px;
+        }
+    }
+    &_banner{
+        background: $bannerBackground;
+        max-width: 1198px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 7px;
+        margin-top: 173px;
+        padding: 37px 0 58px;
+        &_heading{
+            color: $textColor;
+            font-size: 38px;
+            font-weight: bold;
+            line-height: 1;
+            font-family: $fontTitle;
+            @include bottomLine(80px, 16px, 153px, 0);
+        }
+        &_text{
+            font-family: $fontText;
+            color: map-get($newColor, gray);
+            font-size: 21px;
+            line-height: 1;
+            margin-top: 25px;
+        }
+        &_button{
+            @extend .header_button;
+            margin-top: 22px;
+        }
+    }
+}
+
+.footer{
+    background: $cardBackground;
+    font-family: $fontText;
+    padding: 159px 0 70px;
+    color: map-get($newColor, gray);
+    margin-top: -92px;
+    &-wrap{
+        @extend main;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_logo p{
+        color: map-get($newColor, gray);
+    }
+    &_text{
+        max-width: 390px;
+        text-align: left;
+        line-height: 1.5;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+    }
+    &-cr{
+        font-size: 20px;
+    }
+}
+
