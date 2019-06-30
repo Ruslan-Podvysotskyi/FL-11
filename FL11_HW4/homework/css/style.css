@@ -252,6 +252,15 @@ body {
     align-items: center;
     box-shadow: inset 0px 0px 54px 24px rgba(0, 0, 0, 0.5);
 }
+.read__img_item:nth-child(2) {
+    background-image: url(../img/news-list-2.jpg);
+}
+.read__img_item:nth-child(3){
+    background-image: url(../img/news-list-3.jpg);
+}
+.read__img_item:nth-child(4){
+    background-image: url(../img/news-list-4.jpg);
+}
 
 .news__title {
     padding: 8px 47px;
