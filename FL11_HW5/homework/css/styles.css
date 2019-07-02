@@ -1,0 +1,458 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+} */
+
+body {
+  font-family: roboto;
+  background-color: #0b192f;
+  padding:0 13px 10px;
+  line-height: 1;
+}
+
+.post-1 {
+  background: #B71757;
+}
+
+.post-2 {
+  background: #0D7E71;
+}
+
+.post-3 {
+  background: #b1660e;
+}
+
+.post-4 {
+  background: #d12767;
+}
+
+.post-5 {
+  background: #2d95bb;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 480px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.header {
+  background-color: #162b4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 63px;
+}
+
+.nav {
+  margin-top: 27px;
+}
+
+.nav__link{
+  display: none;
+}
+
+.nav__btn {
+  display: block;
+  width: 16px;
+  height: 13px;
+  position: relative;
+}
+
+.nav__btn span,
+.nav__btn span::before,
+.nav__btn span::after {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.nav__btn span::after {
+  content: '';
+  transform: translate(0, -5px);
+}
+
+.nav__btn span::before {
+  content: '';
+  transform: translate(0, 5px);
+}
+
+.header__logo {
+  margin-top: 66px;
+  color: #fff;
+  font-size: 37px;
+  font-weight: 100;
+}
+
+.header__logo_color {
+  color: #d12767;
+}
+
+.main {
+  margin-top: 21px;
+}
+
+.publishing{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 40px 38px 26px;
+  box-sizing: border-box;
+}
+
+.content__title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.content__description {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.5;
+  font-weight: 100;
+  margin-top: 21px;
+  line-height: 1.5;
+}
+
+.content__date {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 51px;
+  font-weight: 100;
+  margin-top: 55px;
+  opacity: 0.5;
+}
+
+.content__date_size {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+
+.news {
+  background-color: #fff;
+  padding: 34px 34px 35px;
+}
+
+.news__title {
+  color: #0b196b;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+.news__description {
+  color: #9ca8ba;
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 14px;
+  line-height: 1.55;
+}
+
+.publishing_margin {
+  margin-top: 22px;
+}
+
+.footer {
+  background-color: #162b4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 40px 21px;
+  margin-top: 43px;
+}
+
+.footer__description {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .footer,
+  .main {
+    max-width: 768px;
+  }
+  .main{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .aside{
+    max-width: 330px;
+  }
+
+  .header__logo{
+    margin-top: 61px;
+  }
+
+  .wrapper{
+    margin: 0;
+    max-width: 440px;
+    margin-right: 25px;
+    flex-shrink: 0;
+  }
+  .content{
+    padding: 37px 38px 26px 33px;
+  }
+
+  .content__date{
+    margin-top: 46px;
+  }
+
+  .content__title{
+    letter-spacing: -0.8px;
+  }
+
+  .news{
+    padding-top: 35px;
+  }
+
+  .news__title{
+    line-height: 1.1;
+    font-size: 27px;
+  }
+  .news__description{
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .header,
+  .footer,
+  .main {
+    max-width: 1400px;
+  }
+
+  .header{
+    width: 100%;
+    padding: 0 0 0 26px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .header__logo{
+    margin-top: 0;
+  }
+  .nav{
+    margin-top: 0;
+    display: flex;
+  }
+  .nav__btn{
+    display: none;
+  }
+  .nav__link{
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    padding: 46px 35px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+  .nav__link:hover{
+    background-color: #283d5f;
+  }
+
+  .wrapper{
+    max-width: 1041px;
+  }
+  .publishing{
+    display: flex;
+  }
+  .publishing:nth-child(2n){
+    flex-direction: row-reverse;
+  }
+  .publishing__img{
+    width: 50%;
+  }
+  .publishing__img:hover:not(.not-hover){
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .content {
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 190px;
+    position: relative;
+  }
+  .content_width{
+    width: 100%;
+  }
+  .content:hover{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .content__title{
+    font-size: 58px;
+  }
+  .content__description{
+    opacity: 0.8;
+  }
+  .content.post-5{
+    padding-right: 100px;
+  }
+  .content__date{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 60px;
+    margin-top: 0;
+  }
+  .publishing:nth-child(2n) .content{
+    padding-left: 190px;
+    padding-right: 38px;
+    text-align: right;
+  }
+  .publishing:nth-child(2n) .content__date{
+    right: auto;
+    left: 10px;
+  }
+  .aside .publishing__img{
+    width: 100%;
+  }
+  .aside .publishing{
+    flex-direction: column;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__description{
+    text-align: left;
+  }
+  .footer__right .footer__description{
+    text-align: right;
+  }
+}
