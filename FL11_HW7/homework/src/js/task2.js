@@ -26,7 +26,6 @@ let prizeTwo = [0, 50, 100, 200];
 
 if (start) {
   randNumberOne = Math.floor(Math.random() * maxNumberOne);
-  console.log(randNumberOne);
   for (let i = 3; i > 0; i--) {
     val = 8
     game = +prompt(`${msg.range} ${val}\n${msg.att} ${i}\n${msg.prize} ${win}$\n${msg.pPrize} ${prizeOne[i]}$`);
@@ -43,7 +42,6 @@ if (start) {
       gameAgain = confirm(`Congratulation, you won! Your prize is: ${win}$. ${msg.continue}`);
       if (gameAgain) {
         randNumberTwo = Math.floor(Math.random() * maxNumberTwo);
-        console.log(randNumberTwo);
         for (let i = 3; i > 0; i--) {
           val = 12;
           game = +prompt(`${msg.range} ${val}\n${msg.att} ${i}\n${msg.prize} ${win}$\n${msg.pPrize} ${prizeTwo[i]}$`);
