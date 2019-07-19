@@ -13,7 +13,7 @@ class Fighter {
             }
 
             let maxHp = 100;
-            
+
             if (hp > maxHp) {
                 hp = maxHp;
             }
@@ -88,10 +88,6 @@ class Fighter {
     }
 }
 
-
-let fighter1 = new Fighter({name: 'John', damage: 10, hp: 100, agility: 90});
-let fighter2 = new Fighter({name: 'Nick', damage: 80, hp: 100, agility: 40});
-
 function battle (firstFighter, secondFighter) {
     let checkFirstFighter = firstFighter.getHealth();
     let checkSecondFighter = secondFighter.getHealth();
@@ -121,4 +117,3 @@ function battle (firstFighter, secondFighter) {
         }
     }
 }
-battle(fighter1, fighter2);
