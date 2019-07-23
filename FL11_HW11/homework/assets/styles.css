@@ -1,0 +1,177 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+.wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0 0;
+}
+
+.title{
+    font-size: 34px;
+    color: #41b5fe;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title-error{
+    text-align: center;
+    font-size: 26px;
+    color: #f00;
+    display: none;
+    transition: 0.6s;
+}
+
+.title-error.open{
+    display: block;
+    transition: 0.6s;
+}
+
+.new-task{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.new-task__input{
+    width: 90%;
+    font-size: 16px;
+    padding: 20px 15px;
+    border: 1px solid #c8d0d8;
+    border-radius: 4px;
+    color: #7d7d7d;
+}
+
+button{
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.new-task__btn{
+    color: #c8d0d8;
+}
+
+.new-task__btn:hover,
+.new-task__btn:focus{
+    color: #b8babb;
+}
+.new-task__btn:active{
+    color: #d1d1d1;
+}
+
+.new-task__btn i {
+    font-size: 53px;
+    
+}
+
+hr{
+    background-color: #e4f2fe;
+    height: 6px;
+    width: 100%;
+    border: 0;
+    margin-top: 15px;
+}
+
+.list{
+    margin-top: 15px;
+}
+
+.task{
+    width: 100%;
+    margin-bottom: 5px;    
+}
+
+.task-cont{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.task-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task__check{
+    color: #aaaaaa;
+    font-size: 32px;
+}
+
+.task__description{
+    font-size: 16px;
+    color: #41b5fe;
+    cursor: pointer;
+}
+
+.edit-btn{
+    color: #89c4f4;
+    margin-left: 10px; 
+}
+
+.delete-btn{
+    color: #89c4f4;
+}
+
+
+.edit-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.task-edit{
+    width: 300px;
+    padding: 11px 10px;
+    border: 1px solid #c8d0d8;
+    border-radius: 3px;
+}
+
+.save-btn{
+    color: #89c4f4;
+    margin-left: 10px;
+}
+
+.save-btn i {
+    font-size: 33px
+}
+
+.edit-mode{
+    display: none;
+}
